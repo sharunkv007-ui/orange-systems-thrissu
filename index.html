@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORANGE SYSTEMS | Multi-Brand IT Showroom &amp; Chip-Level Service - Thrissur</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: #f8fafc; color: #0f172a; line-height: 1.5; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1260px; margin: 0 auto; padding: 0 4%; }
+
+    h1, h2, h3, .bname, .btn, .cat-in, .tab { font-family: 'Outfit', 'Plus Jakarta Sans', 'Segoe UI', sans-serif; }
+
+    /* Main Retail Showroom Header (Nandilath & Venu's Style) */
+    .hdr { background: #0b0428; color: #ffffff; box-shadow: 0 4px 18px rgba(7,3,24,0.22); }
+    .hdr-in { display: flex; align-items: center; justify-content: space-between; gap: 1.1rem; padding: 0.95rem 4%; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .lg { width: 48px; height: 48px; object-fit: contain; border-radius: 10px; background: #ffffff; padding: 3px; }
+    .bname { font-size: 1.6rem; font-weight: 900; letter-spacing: 0.7px; text-transform: uppercase; color: #ffffff; line-height: 1.05; }
+    .bname span { color: #ff6b00; }
+
+    /* Search Bar */
+    .srch { flex: 1; min-width: 230px; max-width: 470px; display: flex; background: #ffffff; border-radius: 999px; overflow: hidden; }
+    .srch input { flex: 1; border: none; background: transparent; padding: 0.68rem 1.15rem; outline: none; font-size: 0.92rem; font-weight: 500; color: #0f172a; }
+    .srch button { background: #ff6b00; color: #ffffff; border: none; padding: 0 1.25rem; font-weight: 800; font-size: 0.88rem; letter-spacing: 0.3px; cursor: pointer; }
+    .srch button:hover { background: #e55d00; }
+
+    /* Header Right: Store Locator + Contact Number */
+    .hact { display: flex; align-items: center; gap: 1.35rem; flex-wrap: wrap; }
+    .hlink { font-size: 0.88rem; font-weight: 700; color: #e2e8f0; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .hlink:hover { color: #ff6b00; }
+    .hdot { width: 7px; height: 7px; border-radius: 50%; background: #ff6b00; display: inline-block; }
+    .ph small { display: block; font-size: 0.7rem; font-weight: 700; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.35px; }
+    .ph strong { font-size: 1rem; font-weight: 800; color: #ffffff; letter-spacing: 0.2px; }
+    .ph:hover strong { color: #ff6b00; }
+
+    /* Vibrant Orange Category Bar */
+    .cat { background: #ff6b00; color: #ffffff; overflow-x: auto; box-shadow: 0 3px 10px rgba(255,107,0,0.2); }
+    .cat-in { display: flex; align-items: center; gap: 1.6rem; padding: 0.68rem 4%; white-space: nowrap; font-size: 0.92rem; font-weight: 800; letter-spacing: 0.25px; }
+    .cat-in a:hover { text-decoration: underline; }
+    .pdf { margin-left: auto; background: #0b0428; color: #ffffff; padding: 0.22rem 0.85rem; border-radius: 6px; font-weight: 800; }
+
+    /* Buttons */
+    .btn { display: inline-block; padding: 0.72rem 1.35rem; border-radius: 8px; font-weight: 800; font-size: 0.92rem; border: none; cursor: pointer; text-align: center; letter-spacing: 0.25px; }
+    .btn-or { background: #ff6b00; color: #ffffff; }
+    .btn-or:hover { background: #e05d00; }
+    .btn-wa { background: #25d366; color: #052e16; }
+    .btn-wa:hover { opacity: 0.92; }
+    .full { width: 100%; }
+
+    /* Hero Banner */
+    .hero-sec { padding: 1.35rem 0 0; }
+    .hero {
+      background: linear-gradient(95deg, rgba(11,4,40,0.94) 0%, rgba(11,4,40,0.78) 54%, rgba(11,4,40,0.22) 100%), url("banner.png") center right / cover no-repeat;
+      border-radius: 16px; padding: 3.4rem 5%; color: #ffffff; min-height: 350px; display: flex; align-items: center; box-shadow: 0 12px 28px rgba(11,4,40,0.14);
+    }
+    .hero-txt { max-width: 590px; }
+    .bdg { display: inline-block; background: #ff6b00; color: #ffffff; padding: 0.28rem 0.85rem; border-radius: 999px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.6px; margin-bottom: 0.9rem; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2rem, 4.3vw, 3.1rem); font-weight: 900; line-height: 1.1; margin-bottom: 0.9rem; letter-spacing: -0.3px; }
+    .hero h1 span, h2 span { color: #ff6b00; }
+    .hero p { color: #f1f5f9; margin-bottom: 1.5rem; font-size: 0.98rem; font-weight: 500; }
+    .hbtns { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+    /* Trust Strip */
+    .trust-sec { padding: 1.15rem 0 0; }
+    .trust-bar { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem 1.4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 1rem; box-shadow: 0 2px 8px rgba(15,23,42,0.04); }
+    .tr-item { display: flex; align-items: center; gap: 0.75rem; }
+    .tr-num { width: 34px; height: 34px; border-radius: 8px; background: #fff7ed; color: #ff6b00; font-weight: 900; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; border: 1px solid #fed7aa; }
+    .tr-item strong { display: block; font-size: 0.95rem; font-weight: 800; color: #0b0428; }
+    .tr-item small { color: #475569; font-size: 0.78rem; font-weight: 600; }
+
+    /* Sections */
+    .sec { padding: 2.9rem 0; }
+    .wh { background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+    .sh { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.6rem; }
+    .sh h2 { font-size: 1.95rem; font-weight: 900; color: #0b0428; letter-spacing: -0.3px; }
+    .sh p { color: #475569; font-size: 0.92rem; font-weight: 600; }
+    .lnk { color: #ff6b00; font-weight: 800; font-size: 0.95rem; }
+
+    /* Filter Tabs & Product Cards */
+    .tabs { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+    .tab { background: #ffffff; color: #0b0428; border: 1px solid #cbd5e1; padding: 0.42rem 0.95rem; border-radius: 999px; cursor: pointer; font-size: 0.85rem; font-weight: 800; }
+    .tab.act, .tab:hover { background: #ff6b00; color: #ffffff; border-color: #ff6b00; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 1.15rem; }
+    .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; box-shadow: 0 3px 10px rgba(15,23,42,0.04); }
+    .card:hover { border-color: #ff6b00; }
+    .tag { align-self: flex-start; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.45px; background: #fff7ed; color: #ff6b00; border: 1px solid #fed7aa; padding: 0.2rem 0.55rem; border-radius: 4px; text-transform: uppercase; }
+    .im { height: 155px; display: flex; align-items: center; justify-content: center; margin: 0.75rem 0; background: #fff7ed; border-radius: 10px; padding: 0.75rem; }
+    .im img { max-height: 100%; max-width: 100%; object-fit: contain; }
+    .card h3 { font-size: 1.18rem; font-weight: 800; color: #0b0428; margin-bottom: 0.35rem; }
+    .card p { font-size: 0.86rem; color: #475569; font-weight: 500; flex: 1; margin-bottom: 0.9rem; }
+
+    .cban { margin-top: 1.7rem; background: #0b0428; color: #ffffff; border-radius: 12px; padding: 1.4rem 1.7rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .cban h3 { font-size: 1.2rem; font-weight: 800; }
+    .cban p { color: #cbd5e1; font-size: 0.88rem; }
+
+    /* Service Hub Cards */
+    .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1.15rem; }
+    .scard { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.35rem; }
+    .scard h3 { font-size: 1.15rem; font-weight: 800; color: #0b0428; margin: 0.55rem 0 0.35rem; }
+    .scard p { font-size: 0.88rem; color: #475569; font-weight: 500; }
+
+    /* Booking Section */
+    .bgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.9rem; align-items: start; }
+    .binfo h2 { font-size: 2rem; font-weight: 900; color: #0b0428; margin: 0.55rem 0 0.65rem; }
+    .binfo p { color: #475569; font-weight: 500; margin-bottom: 1rem; }
+    .binfo ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; font-weight: 700; color: #0f172a; }
+    .bform { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; box-shadow: 0 3px 10px rgba(15,23,42,0.04); }
+    .bform input, .bform select, .bform textarea { padding: 0.78rem 0.95rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; font-weight: 500; outline: none; color: #0f172a; }
+    .bform input:focus, .bform select:focus, .bform textarea:focus { border-color: #ff6b00; }
+    .tbox { margin-top: 0.9rem; padding: 1.05rem; border-radius: 10px; background: #fff7ed; border: 1px solid #ff6b00; text-align: center; }
+    .hid { display: none; }
+
+    /* Dark Navy Footer */
+    .ftr { margin-top: 2.5rem; background: #0b0428; color: #cbd5e1; padding: 2.8rem 0 1.2rem; font-size: 0.88rem; border-top: 4px solid #ff6b00; }
+    .fgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 1.6rem; margin-bottom: 1.6rem; }
+    .ftr h4 { color: #ff6b00; font-weight: 800; margin-bottom: 0.55rem; text-transform: uppercase; font-size: 0.84rem; letter-spacing: 0.45px; }
+    .ftr p { margin-bottom: 0.35rem; }
+    .ftr a:hover { color: #ff6b00; }
+    .fbot { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.95rem; color: #94a3b8; font-size: 0.8rem; font-weight: 600; }
+
+    /* Floating WhatsApp */
+    .fwa { position: fixed; bottom: 18px; right: 18px; z-index: 120; background: #25d366; color: #052e16; font-weight: 800; padding: 0.7rem 1.15rem; border-radius: 999px; box-shadow: 0 6px 18px rgba(37,211,102,0.38); }
+
+    @media (max-width: 768px) {
+      .ph { display: none; }
+      .bname { font-size: 1.25rem; }
+      .hero { min-height: 290px; padding: 2rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hdr">
+    <div class="wrap hdr-in">
+      <a href="#home" class="brand">
+        <img src="logo.png" onerror="this.style.display='none'" alt="Orange Systems" class="lg" />
+        <div class="bname">ORANGE <span>SYSTEMS</span></div>
+      </a>
+
+      <div class="srch">
+        <input id="q" type="text" placeholder="Search laptops, printers, CCTV, spares, repairs..." />
+        <button id="sb" type="button">Search</button>
+      </div>
+
+      <div class="hact">
+        <a href="#contact" class="hlink"><span class="hdot"></span>Store Locator</a>
+        <a href="tel:+919387121045" class="ph">
+          <small>Sales &amp; Service</small>
+          <strong>+91 9387121045</strong>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="cat">
+    <div class="wrap cat-in">
+      <a href="#services">Chip-Level Service</a>
+      <a href="#products" onclick="flt('laptops')">Laptops &amp; Desktops</a>
+      <a href="#products" onclick="flt('printers')">Printers &amp; Inks</a>
+      <a href="#products" onclick="flt('cctv')">CCTV &amp; Wi-Fi</a>
+      <a href="#products" onclick="flt('spares')">Spares &amp; Networking</a>
+      <a href="Orange_Systems_Catalogue.pdf" download class="pdf">Catalogue PDF</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-sec">
+    <div class="wrap">
+      <div class="hero">
+        <div class="hero-txt">
+          <span class="bdg">THRISSUR SHOWROOM &amp; SERVICE HUB</span>
+          <h1>Multi-Brand IT Showroom &amp; <span>Chip-Level Service</span></h1>
+          <p>Laptops, Desktops, Epson/HP Printers, CCTV Surveillance &amp; Genuine Spares — Sales, Upgrades &amp; Precision Repairs under one roof.</p>
+          <div class="hbtns">
+            <a href="#book" class="btn btn-or">Book a Service</a>
+            <a href="https://wa.me/919387121045?text=Hi%20Orange%20Systems%2C%20I%20have%20an%20enquiry." target="_blank" class="btn btn-wa">WhatsApp Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-sec">
+    <div class="wrap trust-bar">
+      <div class="tr-item"><span class="tr-num">01</span><div><strong>Chip-Level Lab</strong><small>Motherboard &amp; BIOS</small></div></div>
+      <div class="tr-item"><span class="tr-num">02</span><div><strong>Fast Diagnostics</strong><small>Quick Turn-Around</small></div></div>
+      <div class="tr-item"><span class="tr-num">03</span><div><strong>Genuine Spares</strong><small>Warranty Backed</small></div></div>
+      <div class="tr-item"><span class="tr-num">04</span><div><strong>Multi-Brand Store</strong><small>Best Local Deals</small></div></div>
+    </div>
+  </section>
+
+  <section id="products" class="sec">
+    <div class="wrap">
+      <div class="sh">
+        <div>
+          <h2>Showroom <span>Product Highlights</span></h2>
+          <p>Multi-brand hardware, spares &amp; security systems in store</p>
+        </div>
+        <div class="tabs">
+          <button class="tab act" type="button" onclick="flt('all',this)">All</button>
+          <button class="tab" type="button" onclick="flt('laptops',this)">Laptops</button>
+          <button class="tab" type="button" onclick="flt('printers',this)">Printers</button>
+          <button class="tab" type="button" onclick="flt('cctv',this)">CCTV</button>
+          <button class="tab" type="button" onclick="flt('spares',this)">Spares</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card item" data-c="laptops">
+          <span class="tag">MULTI-BRAND</span>
+          <div class="im"><img src="laptop.png" onerror="this.parentElement.style.display='none'" alt="" /></div>
+          <h3>Laptops &amp; Desktops</h3>
+          <p>Business, student &amp; custom assembled PCs across top brands.</p>
+          <a class="btn btn-wa full" target="_blank" href="https://wa.me/919387121045?text=Hi%20Orange%20Systems%2C%20please%20share%20Laptop%20%26%20Desktop%20details.">Enquire on WhatsApp</a>
+        </div>
+
+        <div class="card item" data-c="printers">
+          <span class="tag">INKTANK &amp; LASER</span>
+          <div class="im"><img src="printer.png" onerror="this.parentElement.style.display='none'" alt="" /></div>
+          <h3>Printers &amp; Genuine Inks</h3>
+          <p>Epson, HP &amp; Canon InkTank, Laser printers, cartridges &amp; inks.</p>
+          <a class="btn btn-wa full" target="_blank" href="https://wa.me/919387121045?text=Hi%20Orange%20Systems%2C%20please%20share%20Printer%20%26%20Ink%20availability.">Enquire on WhatsApp</a>
+        </div>
+
+        <div class="card item" data-c="cctv">
+          <span class="tag">SECURITY</span>
+          <div class="im"><img src="logo.png" onerror="this.parentElement.style.display='none'" alt="Orange Systems" /></div>
+          <h3>CCTV &amp; Wi-Fi Cameras</h3>
+          <p>HD surveillance kits, 360 Wi-Fi cameras &amp; DVR/NVR setups.</p>
+          <a class="btn btn-wa full" target="_blank" href="https://wa.me/919387121045?text=Hi%20Orange%20Systems%2C%20I%20need%20a%20quote%20for%20CCTV%20%2F%20Wi-Fi%20Cameras.">Enquire on WhatsApp</a>
+        </div>
+
+        <div class="card item" data-c="spares">
+          <span class="tag">UPGRADES &amp; PARTS</span>
+          <div class="im"><img src="logo.png" onerror="this.parentElement.style.display='none'" alt="Orange Systems" /></div>
+          <h3>Spares, Cables &amp; Networking</h3>
+          <p>NVMe SSDs, RAM, adapters, batteries, routers, HDMI &amp; LAN cables.</p>
+          <a class="btn btn-wa full" target="_blank" href="https://wa.me/919387121045?text=Hi%20Orange%20Systems%2C%20checking%20availability%20for%20Spares%20%2F%20Networking%20items.">Enquire on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="cban">
+        <div>
+          <h3>Complete Showroom Stock List</h3>
+          <p>Download our updated customer product catalogue (PDF) or ask on WhatsApp.</p>
+        </div>
+        <a href="Orange_Systems_Catalogue.pdf" download class="btn btn-or">Download Catalogue PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="sec wh">
+    <div class="wrap">
+      <div class="sh">
+        <div>
+          <h2>Orange Systems <span>Service Hub</span></h2>
+          <p>Chip-level diagnostics, printer maintenance &amp; AMC support</p>
+        </div>
+        <a href="#book" class="lnk">Book Service Ticket →</a>
+      </div>
+
+      <div class="sgrid">
+        <div class="scard item">
+          <span class="tag">CHIP-LEVEL</span>
+          <h3>Laptop &amp; Desktop Repair</h3>
+          <p>Motherboard servicing, BIOS programming, display/hinge fixes &amp; thermal care.</p>
+        </div>
+        <div class="scard item">
+          <span class="tag">PRINTER CARE</span>
+          <h3>Epson &amp; HP Printer Service</h3>
+          <p>Head cleaning, roller fixes, ink pad reset &amp; office printer servicing.</p>
+        </div>
+        <div class="scard item">
+          <span class="tag">SURVEILLANCE</span>
+          <h3>CCTV Setup &amp; Maintenance</h3>
+          <p>New camera installations, mobile view setup, cabling &amp; HDD service.</p>
+        </div>
+        <div class="scard item">
+          <span class="tag">IT SUPPORT</span>
+          <h3>Software, Tally &amp; Networking</h3>
+          <p>OS installation, Tally Prime support, LAN/Wi-Fi setup &amp; AMC care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="sec">
+    <div class="wrap bgrid">
+      <div class="binfo">
+        <span class="tag">INSTANT TICKET</span>
+        <h2>Book Your <span>Service Request</span></h2>
+        <p>Log your device issue online to generate an instant Ticket ID and share it on WhatsApp.</p>
+        <ul>
+          <li>✓ Quick check-up at Revathy Complex, West Fort</li>
+          <li>✓ Clear estimate before chip-level repair</li>
+          <li>✓ Saved locally for easy follow-up</li>
+        </ul>
+      </div>
+
+      <div>
+        <form id="sf" class="bform">
+          <input id="cn" type="text" placeholder="Your Name" required />
+          <input id="cp" type="tel" placeholder="Phone / WhatsApp Number" required />
+          <select id="dt" required>
+            <option value="">Select Device / Service Type</option>
+            <option>Laptop Chip-Level Repair</option>
+            <option>Desktop Repair / Upgrade</option>
+            <option>Printer Service (Epson/HP)</option>
+            <option>CCTV &amp; Wi-Fi Camera</option>
+            <option>Networking / Software / Tally</option>
+          </select>
+          <textarea id="id" rows="3" placeholder="Describe the issue or model number..." required></textarea>
+          <button type="submit" class="btn btn-or full">Generate Service Ticket</button>
+        </form>
+        <div id="tr" class="tbox hid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="ftr">
+    <div class="wrap fgrid">
+      <div>
+        <div class="brand" style="margin-bottom:0.55rem;">
+          <img src="logo.png" onerror="this.style.display='none'" alt="Orange Systems" class="lg" />
+          <div class="bname">ORANGE <span>SYSTEMS</span></div>
+        </div>
+        <p>Multi-brand IT showroom and chip-level service center in Thrissur.</p>
+        <p><strong>Proprietor:</strong> Shiju Antony</p>
+      </div>
+      <div>
+        <h4>Showroom Address</h4>
+        <p>ORANGE SYSTEMS<br/>Revathy Complex, Civil Lane,<br/>West Fort, Thrissur - 680004, Kerala</p>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="tel:+919387121045">+91 9387121045</a></p>
+        <p><a href="https://wa.me/919387121045" target="_blank">WhatsApp Support</a></p>
+        <p><a href="mailto:orangesystems04@gmail.com">orangesystems04@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="fbot">2026 ORANGE SYSTEMS, Thrissur. All rights reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/919387121045?text=Hi%20Orange%20Systems%2C%20I%20have%20an%20enquiry." target="_blank" class="fwa">WhatsApp</a>
+
+  <script>
+    function flt(c, b) {
+      document.querySelectorAll(".card").forEach(x => {
+        x.style.display = (c === "all" || x.dataset.c === c) ? "flex" : "none";
+      });
+      if (b) {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("act"));
+        b.classList.add("act");
+      }
+    }
+    const qi = document.getElementById("q");
+    function sr() {
+      const v = qi.value.trim().toLowerCase();
+      document.querySelectorAll(".item").forEach(e => {
+        e.style.display = e.innerText.toLowerCase().includes(v) ? "" : "none";
+      });
+    }
+    qi.addEventListener("input", sr);
+    document.getElementById("sb").addEventListener("click", () => {
+      sr();
+      document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+    });
+    document.getElementById("sf").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const n = document.getElementById("cn").value.trim(),
+            ph = document.getElementById("cp").value.trim(),
+            d = document.getElementById("dt").value,
+            is = document.getElementById("id").value.trim(),
+            id = "OS-" + Math.floor(100000 + Math.random() * 900000),
+            arr = JSON.parse(localStorage.getItem("osTickets") || "[]");
+      arr.push({ id, n, ph, d, is, dt: new Date().toLocaleString() });
+      localStorage.setItem("osTickets", JSON.stringify(arr));
+      const wa = encodeURIComponent("Service Ticket: " + id + "\nName: " + n + "\nPhone: " + ph + "\nService: " + d + "\nIssue: " + is);
+      const r = document.getElementById("tr");
+      r.innerHTML = "<strong>Ticket Created: " + id + "</strong><br/>Thank you, " + n + ". Request for <b>" + d + "</b> logged.<br/><br/><a class='btn btn-wa' target='_blank' href='https://wa.me/919387121045?text=" + wa + "'>Send on WhatsApp</a>";
+      r.classList.remove("hid");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
